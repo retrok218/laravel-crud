@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Route;
+
+
+
+Route::get('/','NotaController@index')->name('inicio');
+
+Route::post('/agregar','NotaController@store')->name('store');
